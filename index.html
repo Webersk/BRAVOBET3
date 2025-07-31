@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRAVOBET - Apostas do Torneio de Padel</title>
+    <link rel="stylesheet" href="styles_improved.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <h1 class="logo">BRAVO<span class="logo-highlight">BET</span></h1>
+                <p class="subtitle">TORNEIO DE PADEL</p>
+            </div>
+            <div class="user-section">
+                <span class="user-greeting" id="userGreeting">Olá, João Silva!</span>
+                <button class="btn btn-secondary" id="logoutBtn">SAIR</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <h2>Bem-vindo ao BRAVOBET</h2>
+            <p>Digite seu nome para começar a apostar:</p>
+            <input type="text" id="usernameInput" placeholder="Seu nome" maxlength="30">
+            <button class="btn btn-primary" id="loginBtn">ENTRAR</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Date Navigation -->
+        <div class="date-navigation">
+            <button class="date-btn active" data-date="31/07/2025">31/07/2025</button>
+            <button class="date-btn" data-date="01/08/2025">01/08/2025</button>
+            <button class="date-btn" data-date="02/08/2025">02/08/2025</button>
+            <button class="date-btn" data-date="03/08/2025">03/08/2025</button>
+        </div>
+
+        <!-- Court Navigation -->
+        <div class="court-navigation">
+            <button class="court-btn active" data-court="all">TODAS AS QUADRAS</button>
+            <button class="court-btn" data-court="sicredi">QUADRA SICREDI</button>
+            <button class="court-btn" data-court="super_lucas">QUADRA SUPER LUCAS</button>
+            <button class="court-btn" data-court="cdc_concretos">QUADRA CDC CONCRETOS</button>
+        </div>
+
+        <!-- Tournament Header -->
+        <div class="tournament-header">
+            <div class="tournament-icon">🏆</div>
+            <div class="tournament-info">
+                <h2>TORNEIO 03 BRAVO PADEL</h2>
+                <p>Apostas divertidas entre amigos • Apenas para entretenimento</p>
+            </div>
+        </div>
+
+        <!-- Betting Cart -->
+        <div class="betting-cart" id="bettingCart">
+            <h3>🎯 Suas Apostas</h3>
+            <div class="cart-items" id="cartItems">
+                <p class="empty-cart">Nenhuma aposta selecionada</p>
+            </div>
+            <div class="cart-actions">
+                <button class="btn btn-secondary" id="clearCartBtn">Limpar</button>
+                <button class="btn btn-primary" id="confirmBetsBtn">CONFIRMAR APOSTAS</button>
+            </div>
+        </div>
+
+        <!-- Matches Container -->
+        <div class="matches-container" id="matchesContainer">
+            <!-- Matches will be dynamically loaded here -->
+        </div>
+
+        <!-- Leaderboard -->
+        <div class="leaderboard" id="leaderboard">
+            <h3>🏆 Ranking dos Apostadores</h3>
+            <div class="leaderboard-list" id="leaderboardList">
+                <!-- Leaderboard will be dynamically loaded here -->
+            </div>
+        </div>
+
+        <!-- Betting History -->
+        <div class="betting-history" id="bettingHistory">
+            <h3>📊 Histórico de Apostas</h3>
+            <div class="history-list" id="historyList">
+                <!-- History will be dynamically loaded here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Sponsors Section -->
+    <footer class="sponsors-section">
+        <h3>Patrocinadores</h3>
+        <div class="sponsors-grid">
+            <div class="sponsor-category">
+                <h4>Patrocinadores Principais</h4>
+                <div class="sponsor-logos">
+                    <img src="images/heineken.png" alt="Heineken" class="sponsor-logo">
+                    <img src="images/coca-cola.png" alt="Coca-Cola" class="sponsor-logo">
+                    <img src="images/campari.png" alt="Campari" class="sponsor-logo">
+                    <img src="images/fernet.png" alt="Fernet" class="sponsor-logo">
+                </div>
+            </div>
+            <div class="sponsor-category">
+                <h4>Patrocinadores das Quadras</h4>
+                <div class="sponsor-logos">
+                    <img src="images/sicredi_new.jpg" alt="Sicredi" class="sponsor-logo">
+                    <img src="images/super_lucas_new.png" alt="Super Lucas" class="sponsor-logo">
+                    <img src="images/cdc_concretos_new.jpg" alt="CDC Concretos" class="sponsor-logo">
+                </div>
+            </div>
+            <div class="sponsor-category">
+                <h4>Apoiadores</h4>
+                <div class="sponsor-logos">
+                    <img src="images/bravo_padel_new.jpg" alt="Bravo Padel" class="sponsor-logo">
+                    <img src="images/fatal-model.png" alt="Fatal Model" class="sponsor-logo">
+                    <img src="images/teatro-biriba.png" alt="Teatro Biriba" class="sponsor-logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bet Confirmation Modal -->
+    <div class="modal" id="betConfirmationModal">
+        <div class="modal-content">
+            <h2>🎯 Confirmar Apostas</h2>
+            <div class="bet-summary" id="betSummary">
+                <!-- Bet summary will be dynamically loaded here -->
+            </div>
+            <div class="whatsapp-section">
+                <p>Suas apostas serão enviadas via WhatsApp para:</p>
+                <p class="whatsapp-number">📱 +55 49 99185-4235</p>
+                <button class="btn btn-primary" id="sendWhatsAppBtn">ENVIAR VIA WHATSAPP</button>
+            </div>
+            <button class="btn btn-secondary" id="closeBetModalBtn">FECHAR</button>
+        </div>
+    </div>
+
+    <script src="tournament_data_complete.js"></script>
+    <script src="script_ultimate.js"></script>
+</body>
+</html>
+

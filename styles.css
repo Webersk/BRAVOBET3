@@ -1,0 +1,1030 @@
+/* Reset e base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header melhorado */
+.header {
+    background: linear-gradient(135deg, rgba(0,0,0,0.95) 0%, rgba(26,26,46,0.95) 100%);
+    backdrop-filter: blur(20px);
+    padding: 15px 20px;
+    border-bottom: 2px solid rgba(0, 255, 65, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 255, 65, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-family: 'Orbitron', monospace;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+    letter-spacing: 2px;
+}
+
+.logo .highlight {
+    color: #00ff41;
+    text-shadow: 0 0 30px rgba(0, 255, 65, 0.8);
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Sistema de login melhorado */
+.user-section {
+    display: flex;
+    align-items: center;
+}
+
+.login-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.login-form input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 65, 0.3);
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: #ffffff;
+    font-size: 14px;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #00ff41;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.login-form input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #00ff41, #00cc33);
+    color: #000000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 255, 65, 0.4);
+    background: linear-gradient(45deg, #00cc33, #00ff41);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.welcome-text {
+    color: #00ff41;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Navegação por datas melhorada */
+.date-navigation {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 255, 65, 0.2);
+}
+
+.date-tabs {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.date-tab {
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 255, 65, 0.3);
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', monospace;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.date-tab::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.date-tab:hover::before {
+    left: 100%;
+}
+
+.date-tab:hover {
+    background: rgba(0, 255, 65, 0.1);
+    border-color: #00ff41;
+    color: #00ff41;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 255, 65, 0.2);
+}
+
+.date-tab.active {
+    background: linear-gradient(45deg, #00ff41, #00cc33);
+    color: #000000;
+    border-color: #00ff41;
+    font-weight: 700;
+    box-shadow: 0 0 30px rgba(0, 255, 65, 0.5);
+}
+
+/* Navegação por quadras melhorada */
+.court-navigation {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(0, 255, 65, 0.1);
+}
+
+.nav-tabs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-tab {
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.nav-tab:hover {
+    background: rgba(0, 255, 65, 0.1);
+    border-color: rgba(0, 255, 65, 0.5);
+    color: #00ff41;
+    transform: translateY(-1px);
+}
+
+.nav-tab.active {
+    background: rgba(0, 255, 65, 0.2);
+    border-color: #00ff41;
+    color: #00ff41;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+}
+
+/* Banner do torneio melhorado */
+.tournament-info {
+    padding: 30px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(0, 255, 65, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+    border-bottom: 1px solid rgba(0, 255, 65, 0.2);
+}
+
+.tournament-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tournament-icon {
+    font-size: 3rem;
+    color: #00ff41;
+    text-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.tournament-details h2 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.tournament-details p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+}
+
+/* Carrinho de apostas melhorado */
+.betting-cart {
+    position: fixed;
+    top: 120px;
+    right: 20px;
+    width: 350px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 255, 65, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 255, 65, 0.2);
+    z-index: 90;
+    overflow: hidden;
+    animation: slideInRight 0.5s ease-out;
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.cart-header {
+    background: linear-gradient(45deg, #00ff41, #00cc33);
+    color: #000000;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header h3 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-clear {
+    background: rgba(0, 0, 0, 0.2);
+    color: #000000;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-clear:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 15px;
+}
+
+.cart-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.cart-item:hover {
+    background: rgba(0, 255, 65, 0.1);
+    border-color: rgba(0, 255, 65, 0.4);
+}
+
+.cart-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.cart-item-match {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.7);
+    flex: 1;
+}
+
+.cart-item-odds {
+    background: linear-gradient(45deg, #00ff41, #00cc33);
+    color: #000000;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.cart-item-bet {
+    color: #00ff41;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.cart-footer {
+    padding: 15px 20px;
+    border-top: 1px solid rgba(0, 255, 65, 0.2);
+}
+
+.btn-confirm {
+    width: 100%;
+    background: linear-gradient(45deg, #00ff41, #00cc33);
+    color: #000000;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-confirm:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 255, 65, 0.4);
+}
+
+/* Seção de partidas melhorada */
+.main-content {
+    padding: 30px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.court-section {
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(0, 255, 65, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.court-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #00ff41;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+}
+
+.matches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+/* Cards de partidas melhorados */
+.match-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.3) 100%);
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.match-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00ff41, #00cc33);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.match-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 255, 65, 0.2);
+    border-color: rgba(0, 255, 65, 0.4);
+}
+
+.match-card:hover::before {
+    opacity: 1;
+}
+
+.match-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.match-time {
+    background: rgba(0, 255, 65, 0.2);
+    color: #00ff41;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.match-category {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.match-teams {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.team {
+    text-align: center;
+}
+
+.team-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.team-odds {
+    background: linear-gradient(45deg, #00ff41, #00cc33);
+    color: #000000;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    min-width: 60px;
+}
+
+.team-odds:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 255, 65, 0.4);
+    background: linear-gradient(45deg, #00cc33, #00ff41);
+}
+
+.vs-divider {
+    font-family: 'Orbitron', monospace;
+    font-weight: 900;
+    font-size: 14px;
+    color: #00ff41;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+/* Apostas especiais melhoradas */
+.special-bets {
+    border-top: 1px solid rgba(0, 255, 65, 0.2);
+    padding-top: 15px;
+}
+
+.special-bets-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #00ff41;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.special-bets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 8px;
+}
+
+.special-bet {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.special-bet:hover {
+    background: rgba(0, 255, 65, 0.1);
+    border-color: rgba(0, 255, 65, 0.3);
+    transform: translateY(-2px);
+}
+
+.special-bet-name {
+    font-size: 10px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.special-bet-odds {
+    font-size: 14px;
+    font-weight: 700;
+    color: #00ff41;
+    margin-bottom: 4px;
+}
+
+.special-bet-desc {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.2;
+}
+
+/* Leaderboard melhorado */
+.leaderboard {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    margin: 30px 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    overflow: hidden;
+}
+
+.leaderboard-header {
+    background: linear-gradient(45deg, #00ff41, #00cc33);
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+.leaderboard-header h3 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.leaderboard-content {
+    padding: 20px;
+}
+
+.leaderboard-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.leaderboard-item:hover {
+    background: rgba(0, 255, 65, 0.1);
+    border-color: rgba(0, 255, 65, 0.3);
+}
+
+.leaderboard-item.current-user {
+    background: rgba(0, 255, 65, 0.2);
+    border-color: #00ff41;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+}
+
+.rank {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    color: #00ff41;
+    min-width: 40px;
+}
+
+.player {
+    flex: 1;
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+.points {
+    font-weight: 700;
+    color: #00ff41;
+}
+
+/* Patrocinadores melhorados */
+.sponsors {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px 20px;
+    border-top: 1px solid rgba(0, 255, 65, 0.2);
+}
+
+.sponsors-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sponsors-title h4 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #00ff41;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+}
+
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sponsor-logo {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.sponsor-logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.sponsor-logo:hover::before {
+    left: 100%;
+}
+
+.sponsor-logo:hover {
+    border-color: rgba(0, 255, 65, 0.4);
+    background: rgba(0, 255, 65, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 255, 65, 0.2);
+}
+
+.sponsor-img {
+    max-width: 100%;
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(1.1) contrast(1.1);
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.sponsor-logo:hover .sponsor-img {
+    filter: brightness(1.3) contrast(1.2);
+    transform: scale(1.05);
+}
+
+/* Modal melhorado */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 255, 65, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 255, 65, 0.3);
+    z-index: 1000;
+    display: none;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    background: linear-gradient(45deg, #00ff41, #00cc33);
+    color: #000000;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px 15px 0 0;
+}
+
+.modal-header h3 {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.bet-summary {
+    margin: 20px 0;
+}
+
+.whatsapp-instruction {
+    background: rgba(0, 255, 65, 0.1);
+    border: 1px solid rgba(0, 255, 65, 0.3);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+    color: #00ff41;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-footer {
+    padding: 20px 25px;
+    border-top: 1px solid rgba(0, 255, 65, 0.2);
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn-whatsapp {
+    background: linear-gradient(45deg, #25d366, #128c7e);
+    color: #ffffff;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .betting-cart {
+        width: 300px;
+    }
+    
+    .matches-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .logo h1 {
+        font-size: 2rem;
+    }
+    
+    .login-form {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .login-form input {
+        width: 100%;
+    }
+    
+    .betting-cart {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        margin: 20px 0;
+        border-radius: 10px;
+    }
+    
+    .tournament-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .tournament-details h2 {
+        font-size: 1.4rem;
+    }
+    
+    .matches-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .match-teams {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .vs-divider {
+        order: -1;
+        margin-bottom: 10px;
+    }
+    
+    .special-bets-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sponsors-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    
+    .modal {
+        width: 95%;
+        margin: 20px;
+    }
+    
+    .modal-footer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .date-tabs, .nav-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .date-tab, .nav-tab {
+        width: 200px;
+        text-align: center;
+    }
+    
+    .sponsors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .special-bets-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animações adicionais */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.match-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.match-card:nth-child(even) {
+    animation-delay: 0.1s;
+}
+
+.match-card:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #00ff41, #00cc33);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #00cc33, #00ff41);
+}
+
